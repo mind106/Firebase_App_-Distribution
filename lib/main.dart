@@ -1,7 +1,9 @@
-// ignore_for_file: no_leading_underscores_for_local_identifiers
+// ignore_for_file: no_leading_underscores_for_local_identifiers, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:multiple_language/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'utils/dep.dart' as dep;
 import 'package:multiple_language/controllers/language_controller.dart';
 import 'package:multiple_language/utils/app_constants.dart';
@@ -9,8 +11,9 @@ import 'package:multiple_language/utils/app_routes.dart';
 import 'package:multiple_language/utils/messages.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  WidgetsFlutterBinding.ensureInitialized();
   final Map<String, Map<String, String>> _languages = await dep.init();
 
   runApp(MyApp(
