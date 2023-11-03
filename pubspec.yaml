@@ -31,6 +31,7 @@ dependencies:
   audioplayers: ^5.2.0
   cloud_firestore: ^4.12.2
   cupertino_icons: ^1.0.6
+  firebase_auth: ^4.12.1
   flutter:
     sdk: flutter
   get: ^4.6.6
